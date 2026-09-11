@@ -1,0 +1,30 @@
+{
+  "name": "ts-rate-bucket",
+  "version": "1.0.0",
+  "description": "A token bucket rate limiter for API calls supporting sliding window and fixed window strategies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "pretest": "tsc -p tsconfig.test.json",
+    "test": "node --test dist-test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.9"
+  }
+}
